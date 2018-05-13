@@ -1,0 +1,12 @@
+
+{% block content %}
+    {% if username is None %}
+        <form role="form" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Entrar</button>
+        </form>
+    {% else %}
+        <h3>Welcome</h3>
+    {% endif %}
+{% endblock %}
